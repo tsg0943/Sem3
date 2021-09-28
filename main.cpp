@@ -12,9 +12,11 @@ int pow(int num, int exp) {
         }
         return result;
     }
+    /// это не правильно да и функция не нужна
     return -1;
 }
 
+/// даже если и делаете такую функцию забываете про то, что число может быть таким +0xaAaA1
 unsigned int char2int(char chr) {
     if (chr >= '0' && chr <= '9')
         return chr - '0';
@@ -32,6 +34,9 @@ int hex2dec(const char *hex, int size) {
 }
 
 int main(int argc, char *argv[]) {
+    /// программа не соответствует требованиям
+    /// нельзя пользоваться стд стрингами
+    /// что делать если на вход ничего не подали 
     std::string hex;
     for (int i = argc - 1; i > 0; i--){
         hex = argv[i];
